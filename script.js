@@ -20,6 +20,7 @@ const count = () => {
     //
     if (step === 0) {
       step = 1;
+      alert("Zero is not a valid step. Step will be considered as 1.");
     }
 
     if (startNum >= 1000000) {
