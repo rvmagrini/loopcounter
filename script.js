@@ -20,17 +20,18 @@ const count = () => {
     step = 1;
   }
 
-  //   let outcomeArr = [];
+  // Looping and Storing
+  let outcomeArr = [];
 
-  //   if (startNum < finishNum) {
-  //     for (let num = startNum; num < finishNum; num += step) {
-  //       outcomeArr.push(num);
-  //     }
-  //   } else {
-  //     for (let num = finishNum; num > startNum; num -= step) {
-  //       outcomeArr.push(num);
-  //     }
-  //   }
+  if (startNum < finishNum) {
+    for (let num = startNum; num < finishNum; num += step) {
+      outcomeArr.push(num);
+    }
+  } else {
+    for (let num = finishNum; num > startNum; num -= step) {
+      outcomeArr.push(num);
+    }
+  }
 
-  //   console.log(outcomeArr);
+  console.log(outcomeArr);
 };
