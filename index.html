@@ -3,29 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="Counter" content="width=device-width, initial-scale=1.0" />
+    <meta name="Time of Day" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../css/style.css" />
 
-    <title>Counter</title>
+    <title>Time of Day</title>
   </head>
-  <body>
+  <body onload="load()">
     <header>
-      <h1>Let's count...</h1>
+      <h1>Time of Day</h1>
     </header>
 
     <section>
-      <div>
-        <h3>Start with:</h3>
-        <input type="number" name="txtstart" id="txtstart" />
-        <h3>Finish on:</h3>
-        <input type="number" name="txtfinish" id="txtfinish" />
-        <h3>Step:</h3>
-        <input type="number" name="txtstep" id="txtstep" />
-        <input type="button" value="Count" onclick="count()" />
+      <div id="msg">MSG</div>
+      <div id="image">
+        <img id="pic" src="../img/morning.png" alt="Time of Day" />
       </div>
-
-      <div id="outcome"></div>
     </section>
 
     <script src="script.js"></script>

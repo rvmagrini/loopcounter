@@ -1,37 +1,27 @@
-const count = () => {
-  // Tagging form fields
+const load = () => {
+  const now = new Date().getHours();
+  // const now = 10;
 
-  let txtStart = document.querySelector("#txtstart").value;
-  let txtFinish = document.querySelector("#txtfinish").value;
-  let txtStep = document.querySelector("#txtstep").value;
+  const msg = document.querySelector("#msg");
+  const pic = document.querySelector("#pic");
 
-  // Checkin fields
-  if (txtStart.length === 0 || txtFinish.length === 0 || txtStep.length === 0) {
-    alert("Please insert the data correctly.");
-  }
+  msg.innerHTML = `Current Local Time: ${now}h.`;
 
-  // Converting fields to numbers
-  let startNum = Number(txtStart);
-  let finishNum = Number(txtFinish);
-  let step = Number(txtStep);
-
-  //  If step = 0
-  if (step === 0) {
-    step = 1;
-  }
-
-  // Looping and Storing
-  let outcomeArr = [];
-
-  if (startNum < finishNum) {
-    for (let num = startNum; num < finishNum; num += step) {
-      outcomeArr.push(num);
-    }
+  if (now < 6) {
+    msg.innerHTML += `<p>Good Night...</p>`;
+    pic.src = "../img/night.png";
+    document.body.style.background = "#798EA2";
+  } else if (now < 12) {
+    msg.innerHTML += `<p>Good Morning!</p>`;
+    pic.src = "../img/morning.png";
+    document.body.style.background = "#ffee93";
+  } else if (now < 18) {
+    msg.innerHTML += `<p>Good Afternoon!</p>`;
+    pic.src = "../img/afternoon.png";
+    document.body.style.background = "#a1cae2";
   } else {
-    for (let num = finishNum; num > startNum; num -= step) {
-      outcomeArr.push(num);
-    }
+    msg.innerHTML += `<p>Good Evening!</p>`;
+    pic.src = "../img/night.png";
+    document.body.style.background = "#798EA2";
   }
-
-  console.log(outcomeArr);
 };
