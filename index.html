@@ -3,29 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="Counter" content="width=device-width, initial-scale=1.0" />
+    <meta name="Prime Numbers" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>Counter</title>
+    <title>Prime Numbers</title>
   </head>
   <body>
     <header>
-      <h1>Let's count...</h1>
+      <h1>PRIME NUMBERS</h1>
     </header>
-
     <section>
-      <div>
-        <h3>Start with:</h3>
-        <p><input type="number" name="txtstart" id="txtstart" /></p>
-        <h3>Finish on:</h3>
-        <p><input type="number" name="txtfinish" id="txtfinish" /></p>
-        <h3>Step:</h3>
-        <p></p><input type="number" name="txtstep" id="txtstep" /></p>
-        <p></p><input type="button" value="Count" onclick="count()" /></p>
+      <div id="checkdiv">
+        <p>
+          Is <input type="number" name="txtnum" id="txtnum" /> a Prime Number?
+        </p>
+        <input type="button" value="Check" id="checkbtn" />
+        <p>
+          <p id="outcomecheck">
+          </p>
+        </div>
+        <div id="finddiv">
+          <p>Find Out all the Prime Numbers</p>
+          Between:
+          <input type="number" name="txtstart" id="txtfirstnum" />
+        </p>
+        <p>
+          And:
+          <input type="number" name="txtfinish" id="txtlastnum" />
+        </p>
+        <input type="button" value="Find" id="findbtn">
+        <p id="outcomefind"></p>
       </div>
-
-      <div id="outcome"></div>
     </section>
 
     <script src="script.js"></script>
