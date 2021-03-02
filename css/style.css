@@ -16,4 +16,6 @@ section {
 input {
   padding: 5px;
   width: 60px;
+  border-radius: 8px;
+  border: 2px solid rgb(103, 103, 103);
 }
